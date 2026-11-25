@@ -1,0 +1,22 @@
+# BP-RZ
+
+```matlab
+clc;
+clear all;
+close all;
+n=floor(mod(randn(1,10),2));
+s(1)=1;
+for i=1:10
+    if(n(i)==0)
+        s=[s ones(1,5)*(-1) zeros(1,5)];
+    else
+        s=[s ones(1,5) zeros(1,5)];
+    end
+end
+plot(s);
+title('BP-RZ');
+ylim([-1.2 1.2]);
+for i=1:10
+    text(i*10-5,1.1,num2str(n(i)));
+end
+```
